@@ -1,3 +1,5 @@
+package Exer1;
+
 import java.awt.peer.SystemTrayPeer;
 import java.util.Scanner;
 
