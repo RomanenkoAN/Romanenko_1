@@ -11,10 +11,9 @@ public class Five {
             long len = 173;
 
             double n = Math.ceil(Math.log10(len));
-            //System.out.println(n);
+            System.out.println(n);
             int[] arr = new int[(int) n];
-            for (int i = 0; i <= n - 1; i++)
-            {
+            for (int i = 0; i <= n - 1; i++) {
                 arr[i] = (int) len / (int) Math.pow(10, (int) n - 1);
 
 
