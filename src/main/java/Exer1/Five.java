@@ -7,14 +7,18 @@ package Exer1;
 
 import java.util.Scanner;
 
+
+
 public class Five {
     public static void main(String[] args) {
 
         Scanner console = new Scanner(System.in);
         System.out.println("Input number: ");
         int n = console.nextInt();
+        int k = (n + "").length();
+        System.out.println(k);
 
-        int[] w = new int[n];
+      /*  int[] w = new int[(n+ "").length()];
         for (int i = 0; i < w.length; i++) {
             w[i] = n % 10;
             n = n / 10;
@@ -23,12 +27,10 @@ public class Five {
             for (int r = 1; i < w.length; r++) {
                 max = Math.max(max, w[r]);
                 System.out.println(max);
-
-            }
-
-        }
+*/
     }
 }
+
 
 
 
