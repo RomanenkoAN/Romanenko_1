@@ -26,33 +26,45 @@ public class Quattro {
         String course = in.nextLine();
 
         if(length < course.length()) length = course.length();
-        length = length + 10;
+
+        length = length+10;
         printData(fio, position, course, length);
     }
 
     public static void printData(String work, String group, String name, int length){
         printFrame(length);
-        System.out.print("* " + name);
-        printSpaces(length - name.length());
+        System.out.print("*");
+        printSpaces((length - name.length())/2);
+        System.out.print(name);
+        printSpaces((length - name.length())/2);
+        System.out.println("*");
 
-        System.out.print("* " + group);
-        printSpaces(length - group.length());
 
-        System.out.print("* " + work);
-        printSpaces(length - work.length());
+        System.out.print("*");
+        printSpaces((length - group.length())/2);
+        System.out.print(group);
+        printSpaces((length - group.length())/2);
+        System.out.println("*");
+
+        System.out.print("*");
+        printSpaces((length - work.length())/2);
+        System.out.print(work);
+        printSpaces((length - work.length())/2);
+        System.out.println("*");
+
         printFrame(length);
     }
 
-    public static void printSpaces(int length){
-        for (int i = 0; i < length-3; i++) {
+    private static void printSpaces(int length){
+        for (int i = 0; i < length; i++) {
             System.out.print(" ");
         }
-        System.out.print("*");
-        System.out.println();
+
+
     }
 
-    public static void printFrame(int length){
-        for (int i = 0; i < length; i++) {
+    private static void printFrame(int length){
+        for (int i = 0; i < length+2; i++) {  // вся
             System.out.print("*");
         }
         System.out.println();

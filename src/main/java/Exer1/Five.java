@@ -5,24 +5,52 @@ package Exer1;
 которые входят в состав данного числа.
 */
 
+import java.util.Scanner;
+
 public class Five {
     public static void main(String[] args) {
 
-            long len = 173;
+        Scanner console = new Scanner(System.in);
+        System.out.println("Input number: ");
+        int n = console.nextInt();
 
-            double n = Math.ceil(Math.log10(len));
-            System.out.println(n);
-            int[] arr = new int[(int) n];
-            for (int i = 0; i <= n - 1; i++) {
-                arr[i] = (int) len / (int) Math.pow(10, (int) n - 1);
+        int[] w = new int[n];
+        for (int i = 0; i < w.length; i++) {
+            w[i] = n % 10;
+            n = n / 10;
 
-
-                System.out.println(arr[i]);
-
+            int max = w[0];
+            for (int r = 1; i < w.length; r++) {
+                max = Math.max(max, w[r]);
+                System.out.println(max);
 
             }
 
         }
     }
+}
+
+
+
+    /*    calculate(n);
+
+    }
+
+    public static void calculate(int n) {
+        int a = n / 10000;
+        int b = (n - a * 10000) / 1000;
+        int c = (n - a * 10000 - b * 1000) / 100;
+        int d = (n - a * 10000 - b * 1000 - c * 100) / 10;
+        int e = (n - a * 10000 - b * 1000 - c * 100 - d * 10);
+
+
+            }
+     public static int min (int a,int b, int c, int d, int e)
+     {
+
+     } */
+
+
+
 
 
