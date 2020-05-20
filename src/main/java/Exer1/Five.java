@@ -14,22 +14,27 @@ public class Five {
 
         Scanner console = new Scanner(System.in);
         System.out.println("Input number: ");
-        int n = console.nextInt();
-        int k = (n + "").length();
-        System.out.println(k);
+        long n = console.nextInt();
 
-      /*  int[] w = new int[(n+ "").length()];
+        long[] w = new long[(n + "").length()];
         for (int i = 0; i < w.length; i++) {
             w[i] = n % 10;
             n = n / 10;
+        }
 
-            int max = w[0];
-            for (int r = 1; i < w.length; r++) {
+
+            long max = w[0];
+            long min = w[0];
+            for (int r = 1; r < w.length; r++)
+            {
                 max = Math.max(max, w[r]);
-                System.out.println(max);
-*/
+                max = Math.min(max, w[r]);
+            }
+        System.out.println("Max digit = "+max);
+        System.out.println("Min digit = "+max);
+        }
     }
-}
+
 
 
 
