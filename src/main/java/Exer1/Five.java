@@ -28,7 +28,7 @@ public class Five {
             for (int r = 1; r < w.length; r++)
             {
                 max = Math.max(max, w[r]);
-                max = Math.min(max, w[r]);
+                min = Math.min(min, w[r]);
             }
         System.out.println("Max digit = "+ max);
         System.out.println("Min digit = "+ min);
