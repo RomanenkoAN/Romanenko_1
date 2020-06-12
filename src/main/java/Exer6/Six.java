@@ -24,6 +24,10 @@ public class Six {
         System.out.println();
 
         howMany(n);
+
+        System.out.println();
+        System.out.println(howMany2(n));
+
     }
 
     public static void howMany (int n) {
@@ -32,6 +36,16 @@ public class Six {
         if (out == 0) return ;
         System.out.println(out);
                 howMany(out);
+
+    }
+    public static int howMany2 (int n) {
+
+        int out = --n;
+        if (out==0) return out;
+        int rez = out + howMany2(out);
+       return rez;
+
+
 
     }
 
