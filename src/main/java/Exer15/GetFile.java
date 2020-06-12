@@ -13,16 +13,18 @@ import java.util.Map;
 public class GetFile
 {
     public static void main(String[] args) throws Exception {
-     /*   String fileName = "C:\\Users\\alromanenko\\Java_test";
-        FileReader getfile = new FileReader("Proba1.txt");  // "C:\\Users\\alromanenko\\Java_test\\Proba1.txt"
-        Scanner scan = new Scanner(getfile);
-        String input = String.valueOf(scan);
-*/
-    String input = "Sproijn gf df g sdg sdg";
 
-        count1(input);
-        bubble(input);
-        sorted(input);
+        FileInputStream fis = new FileInputStream(new File("C:\\Users\\alromanenko\\Java_test\\Proba1.txt"));
+        byte[] content = new byte[fis.available()];
+        fis.read(content);
+        fis.close();
+        String lines = new String(content);
+
+    // String input = "Sproijn gf df g sdg sdg";
+
+        count1(lines);
+        bubble(lines);
+        sorted(lines);
 }
 
 
