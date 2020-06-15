@@ -61,12 +61,12 @@ public class Calculator {
             case 'l': // logA(x) = b    a в степени b = x
                 result = Math.log(num2)/Math.log(num1);
                 break;
-            case 'k': // koren
+            case 'k':
                 result = Math.pow(num1, 1/num2);
                 break;
             default:
                 System.out.println("Операция не распознана. Повторите ввод.");
-                result = calc(num1, num2, getOperation());//рекурсия
+                result = calc(num1, num2, getOperation());
         }
         return result;
     }
