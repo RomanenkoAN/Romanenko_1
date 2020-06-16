@@ -14,7 +14,7 @@ public class Five {
 
         Scanner console = new Scanner(System.in);
         System.out.println("Input number: ");
-        long n = console.nextInt();
+        long n = console.nextLong();
 
         long[] w = new long[(n + "").length()];
         for (int i = 0; i < w.length; i++) {
